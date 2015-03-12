@@ -16,7 +16,7 @@ jQuery(function($){
 	
 	var $renderer = $("#renderer");
 	var $rencon = $renderer[0].getContext("2d");
-	var ws = new WebSocket("ws://localhost:3000");
+	var ws = new WebSocket("ws://"+window.location.hostname+":"+window.location.port);
 	var editor = new Editor("#io");
 	editor.setPreview($preview);
 	var iframeids = {};
