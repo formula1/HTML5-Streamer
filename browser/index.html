@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="/main.css" />
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+<script type="text/javascript" src="/editor_menu.js" ></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/index.js"></script>
+</head>
+<body>
+	<div id="main"><!--
+	--><div id="previews">
+			<div class="hidden">
+			</div>
+			<div class="ratio_9_16">
+				<div id="preview" ></div>
+			</div>
+		</div><!--
+	--><div id="io">
+			<h3>Add Input Video Source</h3>
+			<ul class="inputs">
+				<li>Add Images: <input type="file"  class="image_files" multiple /></li>
+				<li>Add Videos: <input type="file" class="video_files" multiple /><video class="hidden vid_tester"></video></li>
+				<li><a class="add_camera" href="/getusermediaframe.html">Add Camera</a></li>
+				<li><a class="add_desktop" href="/getusermediaframe.html?src=stream">Add Desktop</a></li>
+			</ul>
+			<h3>Edit Layers</h3>
+			<div>
+				<ul class="layers">
+				</ul>
+				<script type="text/html" class="layer_template">
+					<li>
+						<label class="name" ></label>
+						<div>
+							<input type="checkbox" class="visible" id="visible" checked="checked"><label for="visible">Visible</label>
+							<input type="checkbox" class="focus" id="focus"><label for="focus">Focus</label>
+						</div>
+					</li>
+				</script>
+			</div>
+			<h3>Add an Output Target</h3>
+			<ul class="outputs">
+				<li><form action="/url" method="GET">
+					<input type="text" name="url" /><button type="submit" >Add a URL</button>
+				</form></li>
+				<li><form action="/file" method="GET" >
+					<input type="text" name="file" /><button type="submit" >Add a File</button>
+				</form></li>
+			</ul>
+		</div><!--
+--></div>
+	<canvas id="renderer" width=720 height=405 ></canvas>
+</body>
+</html

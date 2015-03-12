@@ -1,0 +1,16 @@
+{
+  "name": "ffmpeg_gui",
+  "version": "0.0.5",
+  "description": "Allows you to stream on rtmp from a canvas tag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "formula1 <samtobia@gmail.com> (https://github.com/formula1)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.2",
+    "fluent-ffmpeg": "^2.0.0-rc3",
+    "ws": "^0.7.1"
+  }
+}
