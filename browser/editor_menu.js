@@ -2,7 +2,7 @@
 function Editor(container){
 	this.$c = $(container);
 	this.$c.accordion();
-	this.$vidtest = this.$c.find("video.tester");
+	this.$vidtest = this.$c.find("video.vid_tester");
 	this.$c.find("input.image_files[type=file]").on("change",this.imageUpload.bind(void(0),this));
 	this.$c.find("input.video_files[type=file]").on("change",this.videoUpload.bind(void(0),this));
 	this.$c.find(".inputs a").on("click",this.captureUserMedia.bind(void(0),this));
